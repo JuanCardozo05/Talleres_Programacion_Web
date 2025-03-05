@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma de conferencias</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e3f2fd;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header, main, section, article, aside, footer, nav {
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+        }
+        header, footer, nav {
+            background-color: #1e88e5;
+            color: #fff;
+        }
+        header {
+            text-align: center;
+            padding: 50px 20px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        section, article {
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+            transition: box-shadow 0.3s ease;
+        }
+        section:hover, article:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .speakers article, .program details, .registration form {
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+        form {
+            margin-top: 20px;
+        }
+        button {
+            background-color: #1e88e5;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, opacity 0.3s ease;
+        }
+        button:hover {
+            background-color: #1565c0;
+            opacity: 0.8;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: border-color 0.3s ease;
+        }
+        input:focus, select:focus, textarea:focus {
+            border-color: #1e88e5;
+        }
+        iframe, canvas {
+            width: 100%;
+            height: 80vh;
+            margin-top: 20px;
+        }
+        .progress-bar {
+            background-color: #76c7c0;
+        }
+        details {
+            margin-top: 20px;
+        }
+        summary {
+            font-weight: bold;
+            cursor: pointer;
+        }
+        progress {
+            width: 100%;
+            margin-top: 20px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1e88e5;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Conferencia internacional sobre tecnología</h1>
+        <iframe src="https://www.youtube.com/embed/7Z2OIKHWQCo?si=Kod9jZvFIByr4hf2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div>
+            <time datetime="2025-04-15T09:00">15 de Abril de 2025</time>
+            <p></p>
+            <meter value="75" min="0" max="100">75%</meter> de asistentes confirmados
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#speakers">Ponentes</a></li>
+            <li><a href="#program">Programa del evento</a></li>
+            <li><a href="#registration">Registro</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="speakers" class="speakers">
+            <h2>Ponentes</h2>
+            <article>
+                <h3>Dr. Jane Doe</h3>
+                <blockquote cite="https://example.com/jane-doe-quote">
+                    <p>"La inteligencia artificial está transformando el mundo de maneras inimaginables."</p>
+                    <cite>— Dr. Jane Doe</cite>
+                </blockquote>
+            </article>
+            <article>
+                <h3>John Smith</h3>
+                <blockquote cite="https://example.com/john-smith-quote">
+                    <p>"La ciberseguridad es fundamental para proteger nuestra información en la era digital."</p>
+                    <cite>— John Smith</cite>
+                </blockquote>
+            </article>
+            <article>
+                <h3>Maria Garcia</h3>
+                <blockquote cite="https://example.com/maria-garcia-quote">
+                    <p>"Blockchain está revolucionando la forma en que realizamos transacciones seguras."</p>
+                    <cite>— Maria Garcia</cite>
+                </blockquote>
+            </article>
+        </section>
+        <section id="program" class="program">
+            <h2>Programa del evento</h2>
+            <details>
+                <summary>15 de abril de 2025</summary>
+                <time datetime="2025-04-15T09:00">09:00 - 10:00</time> - Apertura y Bienvenida
+                <time datetime="2025-04-15T10:00">10:00 - 11:00</time> - Conferencia: El Futuro de la Tecnología
+            </details>
+            <details>
+                <summary>16 de abril de 2025</summary>
+                <time datetime="2025-04-16T09:00">09:00 - 10:00</time> - Taller: Desarrollo de Software
+                <time datetime="2025-04-16T10:00">10:00 - 11:00</time> - Mesa Redonda: Innovaciones Tecnológicas
+            </details>
+            <form>
+                <label for="activity">Selecciona una actividad:</label>
+                <select id="activity" name="activity">
+                    <option value="apertura">Apertura y bienvenida</option>
+                    <option value="futuro_tech">Conferencia: El futuro de la tecnología</option>
+                    <option value="taller_software">Taller: Desarrollo de software</option>
+                    <option value="mesa_redonda">Mesa redonda: Innovaciones tecnológicas</option>
+                </select>
+                <label for="comments">Comentarios:</label>
+                <textarea id="comments" name="comments"></textarea>
+                <button type="submit">Inscribirse</button>
+            </form>
+            <progress value="50" max="100">50%</progress>
+        </section>
+        <section id="registration" class="registration">
+            <h2>Registro</h2>
+            <form>
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name">
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email">
+                <label for="country">País:</label>
+                <input list="countries" id="country" name="country">
+                <datalist id="countries">
+                    <option value="Argentina">
+                    <option value="Brasil">
+                    <option value="Chile">
+                    <option value="México">
+                    <option value="Perú">
+                </datalist>
+                <button type="submit">Registrarse</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Conferencia internacional sobre tecnología.</p>
+    </footer>
+</body>
+</html>
