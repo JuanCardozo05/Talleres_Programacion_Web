@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+    <script type="module" src="inicio.js"></script>
+    <title>Inicio de sesion</title>
+</head>
+
+<body>
+
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form id="formProfesor">
+                <h1>Profesor</h1>
+                <input type="email" id="profesorEmail" placeholder="Email">
+                <input type="password" id="profesorPassword" placeholder="Contraseña">
+                <button type="submit" id="profesorLogin">Ingresa</button>
+            </form>
+        </div>
+        <div class="form-container sign-in">
+            <form id="formEstudiante">
+                <h1>Estudiante</h1>
+                <input type="email" id="estudianteEmail" placeholder="Email">
+                <input type="password" id="estudiantePassword" placeholder="Contraseña">
+                <button type="submit" id="estudianteLogin">Ingresa</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>¿Eres Estudiante?</h1>
+                    <p>Ingresa a la plataforma con el rol de estudiante</p>
+                    <button class="hidden" id="login">Ir ahora</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>¿Eres Profesor?</h1>
+                    <p>Ingresa a la plataforma con el rol de profesor</p>
+                    <button class="hidden" id="register">Ir ahora</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+
+</body>
+
+</html>

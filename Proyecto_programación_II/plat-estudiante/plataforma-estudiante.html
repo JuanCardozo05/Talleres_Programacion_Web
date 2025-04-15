@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma Estudiante</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Contenedor principal */
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+
+        /* Título */
+        h2 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        /* Labels */
+        label {
+            font-weight: bold;
+            display: block;
+            margin: 10px 0 5px;
+            text-align: left;
+        }
+
+        /* Select y Botones */
+        select, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        /* Botón principal */
+        button {
+            background-color: #007bff;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Tareas asignadas */
+        h3 {
+            margin-top: 20px;
+            color: #333;
+        }
+
+        /* Lista de tareas */
+        #tareasLista {
+            background: #f9f9f9;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: left;
+        }
+
+        /* Encabezado fijo */
+        #header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: white;
+            color: black;
+            padding: 15px 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .header-content {
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: auto;
+        }
+
+        #welcomeText {
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        /* Botón de cerrar sesión */
+        #logoutBtn {
+            background-color: red;
+            border: none;
+            color: white;
+            padding: 15px 15px;
+            font-size: 16px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+            width: auto; 
+            min-width: 100px; 
+            text-align: center;
+            white-space: nowrap; 
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div class="header-content">
+            <span id="welcomeText">Bienvenido estudiante</span>
+            <button id="logoutBtn">Cerrar sesión</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>Gestión de Tareas</h2>
+
+        <!-- Selección de Curso -->
+        <label for="curso">Curso</label>
+        <select id="curso">
+            <option value="">Seleccione un curso</option>
+            <option value="Sexto">Sexto</option>
+            <option value="Séptimo">Séptimo</option>
+            <option value="Octavo">Octavo</option>
+            <option value="Noveno">Noveno</option>
+            <option value="Décimo">Décimo</option>
+            <option value="Once">Once</option>
+        </select>
+
+        <!-- Selección de Salón -->
+        <label for="salon">Salón</label>
+        <select id="salon">
+            <option value="">Seleccione un salón</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+        </select>
+
+        <!-- Selección de Materia -->
+        <label for="materia">Materia</label>
+        <select id="materia">
+            <option value="">Seleccione una materia</option>
+            <option value="Física">Física</option>
+            <option value="Inglés">Inglés</option>
+            <option value="Biología">Biología</option>
+            <option value="Química">Química</option>
+            <option value="Matemáticas">Matemáticas</option>
+            <option value="Sociales">Sociales</option>
+            <option value="Español">Español</option>
+            <option value="Ética">Ética</option>
+        </select>
+
+        <button id="verTareas">Ver Tareas</button>
+
+        <h3>Tareas Asignadas</h3>
+        <div id="tareasLista"></div>
+    </div>
+
+    <script type="module" src="estudiante.js"></script>
+</body>
+</html>
